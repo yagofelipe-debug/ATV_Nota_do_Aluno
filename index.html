@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nota do Aluno</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="carnival-bg" aria-hidden="true">
+      <div class="balloon balloon-1"></div>
+      <div class="balloon balloon-2"></div>
+      <div class="balloon balloon-3"></div>
+      <div class="balloon balloon-4"></div>
+      <div class="confetti confetti-1"></div>
+      <div class="confetti confetti-2"></div>
+      <div class="confetti confetti-3"></div>
+    </div>
+
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Carnaval Acadêmico</p>
+          <h1>Nota do Aluno</h1>
+        </div>
+        <div class="badge">🎉 Festa das notas</div>
+      </header>
+
+      <section class="card calculator-card">
+        <div class="student-info">
+          <label>
+            Nome do aluno
+            <input id="studentName" type="text" placeholder="Ex.: Mariazinha" value="Mariazinha" />
+          </label>
+          <label>
+            Disciplina
+            <input id="subject" type="text" placeholder="Ex.: Matemática" value="Matemática" />
+          </label>
+        </div>
+
+        <div class="input-grid">
+          <label>
+            Prova 1
+            <input id="prova1" type="number" min="0" max="10" step="0.1" value="8.5" />
+          </label>
+          <label>
+            Prova 2
+            <input id="prova2" type="number" min="0" max="10" step="0.1" value="7.8" />
+          </label>
+          <label>
+            Trabalho
+            <input id="trabalho" type="number" min="0" max="10" step="0.1" value="9.0" />
+          </label>
+          <label>
+            Participação
+            <input id="participacao" type="number" min="0" max="10" step="0.1" value="8.2" />
+          </label>
+          <label>
+            Projeto
+            <input id="projeto" type="number" min="0" max="10" step="0.1" value="9.4" />
+          </label>
+          <label>
+            Presença (%)
+            <input id="presenca" type="number" min="0" max="100" step="1" value="95" />
+          </label>
+        </div>
+
+        <div class="weight-box">
+          <div>
+            <span>Peso das provas</span>
+            <strong>30% + 30%</strong>
+          </div>
+          <div>
+            <span>Trabalho e projeto</span>
+            <strong>20% + 20%</strong>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="calculateBtn" type="button">Calcular nota</button>
+          <button id="resetBtn" class="secondary" type="button">Limpar</button>
+        </div>
+      </section>
+
+      <section class="card result-card">
+        <div class="result-header">
+          <div>
+            <p class="eyebrow soft">Resultado</p>
+            <h2 id="resultTitle">Seu desempenho</h2>
+          </div>
+          <div class="score-ring">
+            <span id="finalScore">0.0</span>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <article>
+            <span>Média final</span>
+            <strong id="averageValue">0.00</strong>
+          </article>
+          <article>
+            <span>Situação</span>
+            <strong id="statusValue">Aguardando</strong>
+          </article>
+          <article>
+            <span>Presença</span>
+            <strong id="attendanceValue">0%</strong>
+          </article>
+        </div>
+
+        <div class="message-box" id="messageBox">
+          Preencha as notas e veja o resultado da sua festa acadêmica.
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
